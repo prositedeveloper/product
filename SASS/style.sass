@@ -1,0 +1,1005 @@
+*, ::before, ::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html 
+    font-size: 62.5%
+    overflow-x: hidden
+
+body 
+    font-family: 'Poppins', sans-serif
+    font-size: 1.6rem
+    background-color: #fff
+
+.container
+    margin: 0 15rem
+
+// Header
+.header
+    background-color: #33FFB3
+    width: 100%
+    height: 8rem
+
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1000
+
+
+.header.fixed 
+	height: 8rem
+	position: fixed
+
+.header__inner 
+    padding: 2.5rem 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.header__logo
+    display: flex
+    align-items: center
+    img 
+        margin-right: 1rem
+    span
+        color: #173A56
+        font-weight: 700
+        font-size: 3rem
+        line-height: 2.8rem
+
+.header__right 
+    display: flex
+    align-items: center
+    .nav 
+        margin-right: 5rem
+        &__link 
+            color: #22343D
+            text-decoration: none
+            margin-right: 2rem
+            transition: border-bottom .1s linear
+            &:hover 
+                border-bottom: 2px solid #000
+        .active
+            font-weight: 700
+
+.header__button 
+    background-color: transparent
+    padding: 1rem 2.5rem
+    color: #000
+    font-weight: 600
+    margin-right: 1.5rem
+    border-radius: .7rem
+    border: .15rem solid #777777
+    transition: color .2s linear, background-color .2s linear
+    animation: TopToBottom 2s .5s ease
+
+    &:hover 
+        color: #fff
+        background-color: #02897A
+        cursor: pointer
+
+
+@keyframes TopToBottom
+    0%
+        opacity: 0
+        transform: translateY(-10rem)
+
+    75%
+        transform: translateY(1rem)
+
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+
+
+// Intro 
+.intro 
+    margin-top: 13rem
+    margin-bottom: 11.5rem
+
+.intro__inner
+    display: flex
+    align-items: center
+    justify-content: center
+
+.intro__left, .intro__right 
+    width: 55rem
+
+.intro__title 
+    font-size: 4rem
+    line-height: 6rem
+    max-width: 51.8rem
+    font-weight: 700
+    color: #22343D
+    margin-bottom: 1.8rem
+    animation: LeftToRight 2.5s .5s ease
+
+.intro__text 
+    font-size: 1.8rem
+    line-height: 2.8rem
+    max-width: 45.8rem
+    color: #22343D
+    animation: RightToLeft 2s .5s ease
+    margin-bottom: 4.5rem
+
+
+.intro__button 
+    padding: 1.5rem 4rem
+    background-color: #02897A
+    color: #fff
+    font-weight: 700
+    font-size: 1.6rem
+    border: 0
+    border-radius: .4rem
+    margin-right: 3rem
+
+    transition: background-color .2s linear
+
+.intro__button:hover 
+    background-color: darkgreen
+    cursor: pointer
+
+.intro__link 
+    span
+        color: #02897A
+        font-weight: 600
+        font-size: 1.6rem
+        line-height: 2.4rem
+
+
+@keyframes LeftToRight 
+    0%
+        transform: translateX(-15rem)
+
+    75%
+        transform: translateX(1rem)
+
+    100%
+        transform: translateX(0rem)
+
+@keyframes RightToLeft 
+    0%
+        transform: translateX(15rem)
+
+    75%
+        transform: translateX(-1rem)
+
+    100%
+        transform: translateX(0rem)
+
+
+// Product
+.product
+    margin-bottom: 20rem
+
+.product__title 
+    text-align: center
+    font-weight: 700
+    font-size: 3.2rem
+    line-height: 4.8rem
+    margin-bottom: 5.7rem
+    color: #22343D
+
+.product__items 
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+.product__item 
+    max-width: 24rem
+    margin: 0 2.4rem
+
+.product__image 
+    margin-bottom: 3rem
+
+.product__subtitle 
+    font-weight: 600
+    color: #22343D
+    font-size: 2.2rem
+    margin-bottom: 1.3rem
+
+.product__text
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: #22343D
+    margin-bottom: 6rem
+    width: 100%
+
+.product__btn 
+    text-align: center
+
+.product__button 
+    background-color: #02897A
+    padding: 1.5rem 3.2rem
+    color: #fff
+    font-weight: 700
+    font-size: 1.6rem
+    border: 0
+    border-radius: .4rem
+
+    transition: background-color .2s linear
+
+.product__button:hover
+    background-color: darkgreen
+    cursor: pointer
+
+
+// Management
+.main
+    margin-bottom: 18rem
+
+.main__inner 
+    display: flex
+    align-items: center
+    justify-content: center
+
+.main__left, .main__right
+    width: 50rem
+
+.main__left 
+    margin-right: 10rem
+
+.main__title 
+    font-weight: 600
+    font-size: 1.6rem
+    color: #22343D
+    margin-bottom: 1rem
+
+.main__subtitle
+    font-weight: 700
+    font-size: 3.2rem
+    line-height: 4.8rem
+    color: #22343D
+    margin-bottom: 2.3rem
+
+.main__text 
+    margin-bottom: 3rem
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: #22343D
+
+
+// Customer
+.customer 
+    margin-bottom: 18rem
+
+.customer__inner 
+    display: flex
+    align-items: center
+    justify-content: center
+
+.customer__left, .customer__right 
+    width: 50rem
+
+.customer__left
+    margin-right: 10rem
+
+.customer__title 
+    font-weight: 600
+    font-size: 1.6rem
+    color: #22343D
+    margin-bottom: .8rem
+
+.customer__subtitle
+    font-weight: 700
+    font-size: 3.2rem
+    line-height: 4.8rem
+    color: #22343D
+
+.customer__text
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: #22343D
+    margin-bottom: 3rem
+
+.customer__item
+    display: flex
+
+.customer__img 
+    margin-right: 3rem
+
+
+// Process
+.process
+    padding: 50px 0
+    background: linear-gradient(179.59deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 99.63%)
+    margin-bottom: 15rem
+
+.process__title 
+    text-align: center
+    color: #22343D
+    font-size: 3.2rem
+    font-weight: 700
+    line-height: 4.8rem
+    margin-bottom: 1.6rem
+
+.process__subtitle
+    font-weight: 600
+    font-size: 1.6rem
+    line-height: 2.6rem
+    margin: 0 auto
+    text-align: center
+    max-width: 542px
+    margin-bottom: 4.5rem
+
+.process__top 
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+.process__item
+    display: flex
+    align-items: center
+    width: 47rem
+    margin-bottom: 5rem
+
+.process__img 
+    margin-right: 1.6rem
+
+.process__img img 
+    transition: all .2s linear
+
+.process__img:hover img 
+    transform: scale(1.2)
+
+.process__text 
+    margin-right: 1.6rem
+    background-color: #fff
+    padding: 1.5rem 2.5rem
+    box-shadow: 0rem .2rem 1.5rem rgba(23, 58, 86, 0.1)
+    border-radius: 2.6rem
+    font-weight: 500
+    font-size: 1.6rem
+    color: #2F281E
+
+.process__bottom
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    margin-bottom: 4.8rem
+
+.process__btn 
+    text-align: center
+
+.process__button 
+    background-color: #02897A
+    padding: 1.5rem 3rem
+    color: #fff
+    font-weight: 700
+    font-size: 1.6rem
+    border: 0
+    border-radius: .4rem
+
+    transition: background-color .2s linear
+    &:hover
+        background-color: darkgreen
+        cursor: pointer
+
+
+// Content
+.content 
+    margin-bottom: 23rem
+
+.content__title
+    font-weight: 700
+    font-size: 3.4rem
+    line-height: 5.1rem
+    margin-bottom: .8rem
+    text-align: center
+
+.content__subtitle
+    font-weight: 500
+    font-size: 1.6rem
+    line-height: 2.6rem
+    margin-bottom: 3.3rem
+    text-align: center
+
+
+.content__items 
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+.content__item
+    width: 34.8rem
+    height: 35.9rem
+    margin: 0 1.7rem
+    border: 1px solid #e3e3e3
+    border-radius: .8rem
+    margin-bottom: 1rem
+
+.content__image
+    width: 34.8rem
+    margin: 0 auto 2.4rem
+
+
+.content__made
+    padding-left: 2.4rem
+    font-size: 1.6rem
+    line-height: 2.8rem
+    color: #22343D
+    margin-bottom: 1.2rem
+
+.content__made 
+    span
+        font-weight: 700
+
+.content__text 
+    color: #22343D
+    font-size: 2.4rem
+    font-weight: 700
+    line-height: 4rem
+    padding: 0 3rem 4rem 2.4rem
+
+    transition: color .2s linear
+
+.content__text:hover
+    color: #02897A
+    cursor: pointer
+
+
+// Price
+.price 
+    margin-bottom: 15rem
+
+.price__title 
+    text-align: center
+    font-weight: 700
+    font-size: 3.2rem
+    margin-bottom: .8rem
+
+.price__subtitle
+    text-align: center
+    font-weight: 500
+    font-size: 1.6rem
+    margin-bottom: 5rem
+
+.price__items 
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+.price__item
+    width: 32.2rem
+    height: 50rem
+    background: #FFFFFF
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+    border-radius: 8px
+    margin: 0 3.5rem
+    margin-bottom: 1.5rem
+
+    transition: background-color .2s linear, color .2s linear
+    &:hover
+        background-color: #02897A
+        .price__item__title, 
+        .price__item__subtitle, 
+        .price__text
+            color: #fff
+        .price__number 
+            color: #fff
+            span
+                color: #fff
+        .price__button
+            background-color: #fff
+            color: #02897A
+
+.price__item__title
+    text-align: center
+    margin-top: 2.4rem
+    font-weight: 700
+    font-size: 2.4rem
+    line-height: 4rem
+    color: #22343D
+    margin-bottom: .8rem
+
+.price__item__subtitle
+    text-align: center
+    font-size: 1.6rem
+    line-height: 4rem
+    color: #22343D
+    margin-bottom: 2rem
+
+.price__number 
+    text-align: center
+    font-weight: 700
+    font-size: 2.4rem
+    line-height: 3rem
+    color: #02897A
+    letter-spacing: 1%  
+    margin-bottom: 1.6rem
+    span
+        font-weight: 700
+        font-size: 7.6rem
+        line-height: 10rem
+        letter-spacing: 2%
+        color: #02897A  
+    .price__month
+        color: #AFAFAF
+        font-size: 1.6rem
+        line-height: 1.9rem
+        letter-spacing: 1%
+
+.price__text
+    text-align: center
+    font-weight: 500
+    font-size: 1.6rem
+    line-height: 2.2rem
+    letter-spacing: 2%
+    color: #22343D
+    margin-bottom: 1.6rem
+
+.last
+    margin-bottom: 5rem
+    
+.price__btn
+    text-align: center
+    
+.price__button 
+    background-color: #02897A
+    padding: 1.1rem 1.8rem
+    font-weight: 600
+    font-size: 1.8rem
+    line-height: 2.2rem
+    color: #fff
+    border: 0
+    border-radius: .4rem
+
+
+// Clients
+.clients 
+    margin-bottom: 15.7rem
+
+.clients__title
+    font-weight: 700
+    font-size: 3.4rem
+    line-height: 5.7rem
+    letter-spacing: 2%
+    color: #22343D
+    text-align: center
+    margin-bottom: .8rem
+
+.clients__subtitle
+    max-width: 53.7rem
+    margin: 0 auto
+    text-align: center
+    font-weight: 500
+    font-size: 1.6rem
+    line-height: 2.8rem
+    letter-spacing: 2%
+    color: #22343D
+    margin-bottom: 5rem
+
+.clients__items
+    display: flex
+    align-items: center
+    justify-content: center 
+    flex-wrap: wrap   
+
+.client__item
+    max-width: 32.7rem
+    background-color: #fff
+    border: 1px solid #DEDEDE
+    margin: 0 3.2rem 1.5rem
+
+.client__rating
+    padding: 2.8rem 0 0 2.8rem
+
+.client__text
+    padding: 1.6rem 2.6rem
+    font-size: 1.6rem
+    line-height: 2.8rem
+    letter-spacing: 2%
+
+.client__profile
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding-left: 2.6rem
+    padding-bottom: 2.3rem
+
+.client__profile img
+    padding-right: 1.4rem
+
+
+// Business
+.business
+    background: #02897A
+    max-width: 96.8rem
+    margin: 0 auto
+    border-radius: 3.2rem
+    margin-bottom: 15rem
+
+.business__inner
+    display: flex
+    align-items: center
+
+.business__title
+    font-weight: 600
+    font-size: 3.2rem
+    line-height: 4.8rem
+    color: #fff
+    width: 50rem
+    margin-left: -10rem
+    margin-bottom: 5rem
+
+.business__button
+    padding: 1.3rem 3.5rem
+    margin-left: -10rem
+    background-color: #fff
+    border: 0
+    color: #02897A
+    font-weight: 600
+    font-size: 2rem
+    line-height: 3rem
+
+    transition: background-color .2s linear, color .2s linear
+    &:hover
+        background-color: #053d37
+        color: #fff
+        cursor: pointer
+
+// Footer
+.footer__inner
+    display: flex
+    justify-content: center
+    margin-bottom: 3rem
+
+.footer__item
+    margin-right: 10rem
+
+.footer__logo
+    display: flex
+    align-items: center
+    margin-bottom: 2.8rem
+    img 
+        margin-right: 1rem
+    span
+        color: #173A56
+        font-weight: 700
+        font-size: 3rem
+        line-height: 2.8rem
+
+.social__item 
+    text-decoration: none
+    .social__icon
+        fill: #122fd0
+        border: .1rem solid #000
+        border-radius: 5rem
+        background-color: #22e07b
+        padding: .5rem .5rem
+        
+        transition: fill .2s linear, background-color .2s linear
+        &:hover
+            fill: #fff
+            background-color: #000 
+
+.footer__title
+    font-weight: 500
+    font-size: 2rem
+    line-height: 3rem
+    color: #22343D
+    margin-bottom: .8rem
+.title-last
+    max-width: 28rem
+    margin-bottom: 3.4rem
+
+.footer__link a
+    text-decoration: none
+    transition: color .2s linear, border-bottom .1s linear
+    font-size: 1.6rem
+    line-height: 3.5rem
+    color: #22343D
+    &:hover
+        color: #22e07b
+        border-bottom: .2rem solid #000
+
+.input
+    padding: 1rem 12.8rem 1rem 1.5rem
+    margin-bottom: 2rem
+
+.footer__button
+    padding: .8rem 1.5rem
+    color: #fff
+    background-color: #02897A
+    border: 0
+    font-weight: 700
+    font-size: 1.6rem
+    border-radius: .4rem
+
+    transition: background-color .2s linear
+    &:hover
+        background-color: darkgreen
+        cursor: pointer
+
+.footer__copyright
+    color: #22343D
+    font-size: 1.6rem
+    line-height: 3rem
+    text-align: center
+
+// Slider
+.slick-dots
+    text-align: center
+    display: flex
+    justify-content: center
+    list-style: none
+
+.slick-dots 
+    button 
+        font-size: 0
+        background: #000
+        border: 0
+        border-radius: 50%
+        height: 1.5rem
+        width: 1.5rem
+        margin: .5rem
+        outline: 0
+
+.slick-dots
+    li[class="slick-active"]
+        button
+            background: #02897A
+
+// Burger
+.burger__menu
+    content: ""
+    width: 3rem
+    height: .4rem
+    background-color: #02897A
+    border-radius: .5rem
+    cursor: pointer
+
+    position: relative
+    display: none
+    &::before
+        content: ""
+        width: 3rem
+        height: .4rem
+        background-color: #02897A
+        border-radius: .5rem
+        cursor: pointer
+
+        position: absolute
+        top: -.8rem
+    &::after
+        content: ""
+        width: 3rem
+        height: .4rem
+        background-color: #02897A
+        border-radius: .5rem
+        cursor: pointer
+
+        position: absolute
+        top: .8rem
+
+#close 
+    content: ""
+    background-color: #fff
+    width: 3rem
+    height: .4rem
+    cursor: pointer
+    position: relative
+    display: none
+
+    transform: rotate(45deg)
+
+    position: relative
+    &::after
+        content: ""
+        background-color: #fff
+        width: 3rem
+        height: .4rem
+
+        position: absolute
+        top: 0
+        left: 0
+       
+        transform: rotate(90deg)
+
+
+
+@media (max-width: 1200px) 
+
+    .container
+        margin: 0 12rem
+
+    .header
+        margin-bottom: 5rem
+
+    .nav 
+        background-color: #02897A
+        width: 100%
+        height: 100%
+        display: none
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        z-index: 999
+
+        position: absolute
+        top: 7rem
+        left: 0rem
+        right: 10rem
+    
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 5rem 0
+            font-size: 4rem
+            &:hover
+                border-bottom: 0
+                text-decoration: underline
+
+    .nav.show
+        display: flex
+        height: 100vh
+    
+    .header__btn 
+        display: none
+
+    .header__btn.btn
+        display: flex
+        
+    .header__button
+        background-color: #fff
+
+        transition: background-color .2s linear, color .2s linear
+        &:hover
+            background-color: #000
+            color: #fff
+        
+
+    .header__mode
+        display: none
+
+    .intro__inner
+        display: block
+        text-align: center
+
+    .intro__left, .intro__right 
+        text-align: center
+        max-width: 100%
+        margin: 0 auto
+
+    .intro__left
+        margin-bottom: 5rem
+
+    .burger__menu 
+        display: block
+
+    .product__items
+        margin: 0 auto
+
+    .main__inner
+        display: block
+
+    .main__left, .main__right
+        max-width: 100%
+        margin: 0 auto
+
+    .customer__inner
+        display: block
+
+    .customer__left, .customer__right
+        max-width: 100%
+        margin: 0 auto
+
+    .process__top, .process__bottom
+        display: block
+
+    .process__item
+        max-width: 100%
+        margin: 0 auto
+
+    .business
+        display: none
+
+
+
+@media (max-width: 1050px) 
+
+    .nav__link
+        color: #fff
+        padding: 3.5rem 0
+        font-size: 4rem
+
+    .footer__inner
+        display: block
+        text-align: center
+
+    .footer__logo
+        display: block
+
+    .footer__item
+        margin: 2rem 0
+
+    .title-last
+        margin: 0 auto
+        margin-bottom: 1.5rem
+
+    
+
+
+@media (max-width: 920px)
+
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 3rem 0
+            font-size: 3rem
+    
+@media (max-width: 768px)
+
+    .container
+        margin: 0 8rem
+
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 6rem 0
+            font-size: 3rem
+
+    .intro__title
+        font-size: 3rem
+
+    .intro__image, .main__image, .customer__image
+        img
+           width: 35rem
+
+    .price__item
+        width: 100%
+
+
+@media (max-width: 668px) 
+
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 4rem 0
+            font-size: 3rem
+
+
+@media (max-width: 568px)
+
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 3rem 0
+            font-size: 3rem
+
+    .container
+        margin: 0 3rem
+
+  
+
+@media (max-width: 400px)
+
+    .container
+        margin: 0 1rem
+
+    .nav 
+        .nav__link
+            color: #fff
+            padding: 3rem 0
+            font-size: 3rem
+
+    .intro__image, .main__image, .customer__image
+        img
+            width: 25rem
+
+    .product__title, 
+    .process__title, 
+    .content__title, 
+    .price__title,
+    .clients__title
+        font-size: 2.5rem
+
+    .intro__button
+        width: 100%
+        margin-bottom: 1rem
